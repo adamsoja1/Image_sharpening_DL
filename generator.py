@@ -2,7 +2,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import cv2
-
+#generator
 def image_load_generator_x(path,batch_size):
     files = os.listdir(f'{path}')
     L = len(files)
@@ -31,7 +31,7 @@ def image_load_generator_x(path,batch_size):
             batch_size_end +=batch_size
             
             
-            
+ # generator blurry           
 def image_load_generator_blurry(path,batch_size):
 
     files = os.listdir(f'{path}')
