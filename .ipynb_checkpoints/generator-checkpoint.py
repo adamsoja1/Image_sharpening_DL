@@ -24,8 +24,10 @@ def image_load_generator_x(path,batch_size):
 
             
 
-        
-            yield(np.array(x_train))
+            x_train = np.array(x_train)
+            x_train = x_train/255
+            
+            yield(x_train)
             
             batch_start +=batch_size
             batch_size_end +=batch_size
@@ -56,10 +58,11 @@ def image_load_generator_blurry(path,batch_size):
   
                 x_train.append(image)
 
+            x_train = np.array(x_train)
+            x_train = x_train/255
             
-
-        
-            yield(np.array(x_train))
+            yield(x_train)
+            
             
             batch_start +=batch_size
             batch_size_end +=batch_size
